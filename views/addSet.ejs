@@ -1,87 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/main.css" />
-
     <title>Lego Collection</title>
-</head>
-<body>
-    <header>
-        <%- include('partials/navbar', {page:'/lego/addSet'}) %>
-    </header>
-    <main class="container mx-auto">
-        <!-- Hero splash -->
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content text-center">
-                <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Add Set</h1>
-                    <p class="py-6">Use the form below to add a new set to the collection.</p>
-                </div>
-            </div>
-        </div> 
-        <!-- Form -->
-        <form action="/lego/addSet" method="POST" class="mt-10">
-          <div class="form-control">
-            <label class="label" for="name">
-              <span class="label-text">Set Name</span>
-            </label>
-            <input type="text" id="name" name="name" class="input input-bordered" required>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body tabindex="-1">
+    <%- include('partials/navbar', {page: '/lego/addSet'}) %>
+
+    <div class="container">
+      <div class="hero">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Add Set</h1>
+            <p class="py-6">Use the below form to add a new Lego Set to the collection</p>
           </div>
-          
-          <div class="form-control">
-            <label class="label" for="year">
-              <span class="label-text">Year</span>
-            </label>
-            <input type="number" id="year" name="year" class="input input-bordered" required>
-          </div>
-          
-          <div class="form-control">
-            <label class="label" for="num_parts">
-              <span class="label-text">Number of Parts</span>
-            </label>
-            <input type="number" id="num_parts" name="num_parts" class="input input-bordered" required>
-          </div>
-          
-          <div class="form-control">
-            <label class="label" for="img_url">
-              <span class="label-text">Image URL</span>
-            </label>
-            <input type="url" id="img_url" name="img_url" class="input input-bordered" required>
-          </div>
-          
-          <div class="form-control">
-            <label class="label" for="theme_id">
-              <span class="label-text">Theme</span>
-            </label>
-            <select id="theme_id" name="theme_id" class="select select-bordered" required>
-              <% themes.forEach(theme => { %>
-                <option value="<%= theme.id %>"><%= theme.name %></option>
-              <% }) %>
-            </select>
-          </div>
-          
-          <div class="form-control">
-            <label class="label" for="set_num">
-              <span class="label-text">Set Number</span>
-            </label>
-            <input type="text" id="set_num" name="set_num" class="input input-bordered" required>
-          </div>
-          
-          <div class="form-control mt-6">
-            <button type="submit" class="btn btn-primary">Add Set</button>
-          </div>
-        </form>
+        </div>
       </div>
+
+      <br />
+
+      <form action="/lego/addSet" method="post">
+        <div class="form-grid section">
+          <div>
+            <div class="mb-6">
+              <label for="name" class="block text-gray-700 font-medium">Name</label>
+              <input type="text" id="name" name="name" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+            </div>
+            <div class="mb-6">
+              <label for="year" class="block text-gray-700 font-medium">Year</label>
+              <input type="number" id="year" name="year" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+            </div>
+          </div>
+          <div>
+            <div class="mb-6">
+              <label for="num_parts" class="block text-gray-700 font-medium">Number of Parts</label>
+              <input type="number" id="num_parts" name="num_parts" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+            </div>
+            <div class="mb-6">
+              <label for="img_url" class="block text-gray-700 font-medium">Image URL</label>
+              <input type="url" id="img_url" name="img_url" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+            </div>
+          </div>
+          <div>
+            <div class="mb-6">
+              <label for="theme_id" class="block text-gray-700 font-medium">Theme</label>
+              <select id="theme_id" name="theme_id" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+                <% theme.forEach(theme=>{ %>
+                  <option value="<%= theme.id %>">
+                    <%= theme.name %>
+                  </option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label for="set_num" class="block text-gray-700 font-medium">Set Num</label>
+              <input type="text" id="set_num" name="set_num" required
+                class="border-gray-300 rounded-md px-3 py-2 focus:border-blue-300">
+            </div>
+          </div>
+        </div>
+        <div class="button-container section">
+          <button type="submit" class="btn btn-primary">Add Set</button>
+        </div>
+      </form>
     </div>
+  </body>
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2024 Ayush Dobiwala - Assignment Submission
   </div>
-    </main>
-</body>
-<!-- Footer -->
-<div class="footer">
-  &copy; 2024 Ayush Dobiwala - Assignment Submission
-</div>
 
 </html>
