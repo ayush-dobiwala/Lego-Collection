@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lego Collection</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body tabindex="-1">
+
+  <%- include('partials/navbar',{page: ''}) %>
+
+  <div class="container h-[80vh] mx-auto p-4 grid place-items-center">
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content flex flex-col py-12">
+          <h1 class="text-5xl font-bold">Log In</h1>
+          <p>Please provide your credentials below</p>
+        </div>
+      </div>
+      <% if (locals.message) { %>
+        <div role="alert" class="alert alert-error mt-6 text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span><%= message %></span>
+        </div>
+      <% } %>
+      <div class="p-6 w-full">
+        <form action="/login" method="post" class="flex flex-col gap-4">
+          <div class="flex flex-col w-full gap-2">
+            <label for="userName" class="text-sm">Username</label>
+            <input class="input input-bordered" type="text" id="userName" name="userName"
+            required placeholder="User Name" value="<%= locals.userName || '' %>" />
+          </div>
+          <div class="flex flex-col w-full gap-2">
+            <label for="password" class="text-sm">Password</label>
+            <input class="input input-bordered" type="password" id="password" name="password"
+            required placeholder="Password"/>
+          </div>
+          <input type="submit" class="btn btn-success w-fit text-white" value="login" />
+        </form>
+      </div>
+    </div>
+</body>
+<!-- Footer -->
+<div class="footer">
+  &copy; 2024 Ayush Dobiwala - Assignment Submission
+</div>
+
+</html>
