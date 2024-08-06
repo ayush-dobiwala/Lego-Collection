@@ -10,7 +10,7 @@
 *  Student ID: 152879227      
 *  Date: 26th July, 2024
 *
-*  Published URL: https://lego-collection-ahdxxznu2-ayush-dobiwalas-projects.vercel.app/
+*  Published URL: https://lego-collection-red.vercel.app/
 ****************************************************************************************************/
 
 require('dotenv').config();
