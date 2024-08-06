@@ -1,6 +1,6 @@
 # LEGO Collection Website
 
-### [preview](https://lego-collection-ashy.vercel.app/)
+### [preview](https://lego-collection-hheg52hn9-ayush-dobiwalas-projects.vercel.app/)
 
 ## Description
 
