@@ -1,4 +1,4 @@
-/********************************************************************************
+/****************************************************************************************************
 *  WEB322 – Assignment 06
 * 
 *  I declare that this assignment is my own work in accordance with Seneca's
@@ -10,8 +10,8 @@
 *  Student ID: 152879227      
 *  Date: 26th July, 2024
 *
-*  Published URL: lego-collection-ashy.vercel.app
-********************************************************************************/
+*  Published URL: https://lego-collection-ahdxxznu2-ayush-dobiwalas-projects.vercel.app/
+****************************************************************************************************/
 
 require("pg");
 var path = require("path");

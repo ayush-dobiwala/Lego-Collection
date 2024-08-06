@@ -1,3 +1,18 @@
+/****************************************************************************************************
+*  WEB322 – Assignment 06
+* 
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+* 
+*  https://www.senecacollege.ca/about/policies/academic-integrity-policy.html
+* 
+*  Name: Ayush Dobiwala
+*  Student ID: 152879227      
+*  Date: 26th July, 2024
+*
+*  Published URL: https://lego-collection-ahdxxznu2-ayush-dobiwalas-projects.vercel.app/
+****************************************************************************************************/
+
 require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
