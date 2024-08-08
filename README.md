@@ -1,6 +1,6 @@
 # LEGO Collection Website
 
-### [Preview](https://lego-collection-hheg52hn9-ayush-dobiwalas-projects.vercel.app/){:target="_blank"}
+### <a href="https://lego-collection-hheg52hn9-ayush-dobiwalas-projects.vercel.app/" target="_blank">Preview</a>
 
 ## Description
 
